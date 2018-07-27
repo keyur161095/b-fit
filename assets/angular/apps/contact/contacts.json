@@ -10,7 +10,7 @@
       "home": "(021) 1234 8755",
       "work": "(021) 9000 9877",
       "notes": "",
-      "avatar": "../assets/images/a3.jpg"
+      "avatar": "./assets/images/a3.jpg"
     },
     {
       "id": 12,
@@ -22,7 +22,7 @@
       "home": "(021) 9876 9485",
       "work": "(021) 2130 3049",
       "notes": "",
-      "avatar": "../assets/images/a0.jpg"
+      "avatar": "./assets/images/a0.jpg"
     },
     {
       "id": 11,
@@ -34,7 +34,7 @@
       "home": "(021) 1234 8755",
       "work": "(021) 9000 9877",
       "notes": "",
-      "avatar": "../assets/images/a1.jpg"
+      "avatar": "./assets/images/a1.jpg"
     },
     {
       "id": 10,
@@ -46,7 +46,7 @@
       "home": "(021) 1234 8755",
       "work": "(021) 9000 9877",
       "notes": "",
-      "avatar": "../assets/images/a2.jpg"
+      "avatar": "./assets/images/a2.jpg"
     },
     {
       "id": 9,
@@ -58,7 +58,7 @@
       "home": "(021) 1234 8755",
       "work": "(021) 9000 9877",
       "notes": "",
-      "avatar": "../assets/images/a4.jpg"
+      "avatar": "./assets/images/a4.jpg"
     },
     {
       "id": 8,
@@ -70,7 +70,7 @@
       "home": "(021) 1234 8755",
       "work": "(021) 9000 9877",
       "notes": "",
-      "avatar": "../assets/images/a5.jpg"
+      "avatar": "./assets/images/a5.jpg"
     },
     {
       "id": 7,
@@ -82,7 +82,7 @@
       "home": "(021) 1234 8755",
       "work": "(021) 9000 9877",
       "notes": "",
-      "avatar": "../assets/images/a6.jpg"
+      "avatar": "./assets/images/a6.jpg"
     },
     {
       "id": 6,
@@ -94,7 +94,7 @@
       "home": "(021) 1234 8755",
       "work": "(021) 9000 9877",
       "notes": "",
-      "avatar": "../assets/images/a7.jpg"
+      "avatar": "./assets/images/a7.jpg"
     },
     {
       "id": 5,
@@ -106,7 +106,7 @@
       "home": "(021) 1234 8755",
       "work": "(021) 9000 9877",
       "notes": "",
-      "avatar": "../assets/images/a8.jpg"
+      "avatar": "./assets/images/a8.jpg"
     },
     {
       "id": 4,
@@ -118,7 +118,7 @@
       "home": "(021) 1234 8755",
       "work": "(021) 9000 9877",
       "notes": "",
-      "avatar": "../assets/images/a9.jpg"
+      "avatar": "./assets/images/a9.jpg"
     },
     {
       "id": 3,
@@ -130,7 +130,7 @@
       "home": "(021) 1234 8755",
       "work": "(021) 9000 9877",
       "notes": "",
-      "avatar": "../assets/images/a8.jpg"
+      "avatar": "./assets/images/a8.jpg"
     },
     {
       "id": 2,
@@ -142,7 +142,7 @@
       "home": "(021) 1234 8755",
       "work": "(021) 9000 9877",
       "notes": "",
-      "avatar": "../assets/images/a8.jpg"
+      "avatar": "./assets/images/a8.jpg"
     },
     {
       "id": 1,
@@ -154,7 +154,7 @@
       "home": "(021) 1234 8755",
       "work": "(021) 9000 9877",
       "notes": "",
-      "avatar": "../assets/images/a8.jpg"
+      "avatar": "./assets/images/a8.jpg"
     }
   ]
 }

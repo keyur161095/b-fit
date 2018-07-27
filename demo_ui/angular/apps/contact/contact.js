@@ -108,7 +108,7 @@
             var item = {
               id: contactStorage.nextId(),
               group: 'Friends',
-              avatar:'../assets/images/a0.jpg'
+              avatar:'./assets/images/a0.jpg'
             };
             vm.items.push(item);
             vm.selectItem(item);

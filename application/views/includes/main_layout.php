@@ -35,7 +35,7 @@
               </li>
 
               <li>
-                <a href="index.php?/members/getAllMembers">
+                <a href="/b-fit/index.php?/members/getAllMembers">
                   <!-- <span class="nav-caret">
                     <i class="fa fa-caret-down"></i>
                   </span> -->
@@ -127,11 +127,11 @@
                   <i class="fa fa-fw fa-plus text-muted"></i>
                   <span>New</span>
                 </a>
-                <div ui-include="'../views/blocks/dropdown.new.html'"></div>
+                <div ui-include="'./assets/views/blocks/dropdown.new.html'"></div>
               </li>
             </ul>
 
-            <div ui-include="'../views/blocks/navbar.form.html'"></div>
+            <div ui-include="'./assets/views/blocks/navbar.form.html'"></div>
             <!-- / -->
           </div>
           <!-- / navbar collapse -->
@@ -143,7 +143,7 @@
                 <i class="material-icons">&#xe7f5;</i>
                 <span class="label label-sm up warn">3</span>
               </a>
-              <div ui-include="'../views/blocks/dropdown.notification.html'"></div>
+              <div ui-include="'./assets/views/blocks/dropdown.notification.html'"></div>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link p-0 clear" href="#" data-toggle="dropdown">
@@ -152,7 +152,7 @@
                   <i class="on b-white bottom"></i>
                 </span>
               </a>
-              <div ui-include="'../views/blocks/dropdown.user.html'"></div>
+              <div ui-include="'./assets/views/blocks/dropdown.user.html'"></div>
             </li>
             <li class="nav-item hidden-md-up">
               <a class="nav-link pl-2" data-toggle="collapse" data-target="#collapse">

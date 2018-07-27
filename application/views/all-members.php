@@ -58,7 +58,7 @@
             foreach($results as $row) {
               echo '<tr>';
               echo '<td> <label class="ui-check m-0"> <input type="checkbox" name="post[]"> <i class="dark-white"> </i> </label> </td>';
-              echo '<td>'.$row->fname.'</td>';
+              echo '<td>'.$row->name.'</td>';
               echo '<td>'.$row->weight.'</td>';
               echo '<td>'.$row->mobile_number.'</td>';
               echo '<td>'.$row->join_date.'</td>';

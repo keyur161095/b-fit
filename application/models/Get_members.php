@@ -15,7 +15,7 @@ class Get_members extends CI_Model
     // return $query->row();
 
     $results = array();
-    $this->db->select('fname, weight, birth_date, mobile_number, join_date, plan');
+    $this->db->select('name, weight, birth_date, mobile_number, join_date, plan');
     $this->db->from('members');
 
     $query = $this->db->get();
