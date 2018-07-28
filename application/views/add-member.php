@@ -26,7 +26,7 @@
         </div>
       </div>
 
-      <div class="form-group row">
+      <div class="form-group row" >
         <label class="col-sm-3 form-control-label">Join Date <span style="color: red;">*<span style="font-size: 10px;"> Required</span></span></label>
         <div class="col-sm-9">
           <input type="date" name="join_date" class="form-control" placeholder="Date of joinig" required>

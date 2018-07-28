@@ -35,7 +35,7 @@ var MODULE_CONFIG = {
                       '../libs/jquery/summernote/dist/summernote.js'
                     ],
     parsley:        [
-                      '../libs/jquery/parsleyjs/dist/parsley.css',
+                      '../assets/libs/jquery/parsleyjs/dist/parsley.css',
                       '../libs/jquery/parsleyjs/dist/parsley.min.js'
                     ],
     select2:        [

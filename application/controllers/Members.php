@@ -32,7 +32,7 @@ class Members extends CI_Controller
       );
 
     $this->add_member->add($data);
-    $this->load->view('all-members');
+    redirect('index.php?/members/getAllMembers');
   }
 
 }
