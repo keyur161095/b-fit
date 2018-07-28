@@ -5,9 +5,9 @@
 class Add_member extends CI_Model
 {
 
-  public function add()
+  public function add($data)
   {
-    
+    $this->db->insert('members', $data);
   }
 }
 

@@ -14,8 +14,25 @@ class Members extends CI_Controller
 
   public function addMember()
   {
-    $data['member'] = $this->add_member->add();
-    $this->load->view('add-member', $data);
+    $this->load->view('add-member');
+  }
+
+  public function submit()
+  {
+    $data = array(
+      'name' => $this->input->post('name'),
+      'join_date' => $this->input->post('join_date'),
+      'plan' => $this->input->post('plan'),
+      'email' => $this->input->post('email'),
+      'mobile_number' => $this->input->post('contact'),
+      'weight' => $this->input->post('weight'),
+      'address' => $this->input->post('address'),
+      'birth_date' => $this->input->post('birth_date'),
+      'notes' => $this->input->post('notes')
+      );
+
+    $this->add_member->add($data);
+    $this->load->view('all-members');
   }
 
 }

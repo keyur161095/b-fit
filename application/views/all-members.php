@@ -1,5 +1,3 @@
-<?php defined('BASEPATH') OR exit('No script is directly allowed'); ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

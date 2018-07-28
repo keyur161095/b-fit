@@ -53,18 +53,6 @@
               </li>
 
               <li>
-                <a>
-                  <span class="nav-icon">
-                    <i class="material-icons">&#xe8f0;
-                      <span ui-include="'./assets/images/i_2.svg'"></span>
-                    </i>
-                  </span>
-                  <span class="nav-text">Reports</span>
-                </a>
-
-              </li>
-
-              <li>
                 <a href="widget.html" >
                   <span class="nav-icon">
                     <i class="material-icons">&#xe8d2;
@@ -86,9 +74,33 @@
                 </a>
               </li>
 
+              <li>
+                <a href="widget.html" >
+                  <span class="nav-icon">
+                    <i class="material-icons">&#xe8d2;
+                      <span ui-include="'./assets/images/i_3.svg'"></span>
+                    </i>
+                  </span>
+                  <span class="nav-text">Contacts</span>
+                </a>
+              </li>
+
+              <li>
+                <a>
+                  <span class="nav-icon">
+                    <i class="material-icons">&#xe8f0;
+                      <span ui-include="'./assets/images/i_2.svg'"></span>
+                    </i>
+                  </span>
+                  <span class="nav-text">Reports</span>
+                </a>
+
+              </li>
+
+
         </nav>
     </div>
-    <div class="b-t">
+    <!-- <div class="b-t">
       <div class="nav-fold">
         <a href="profile.html">
             <span class="pull-left">
@@ -100,7 +112,7 @@
             </span>
         </a>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 <!-- / -->
