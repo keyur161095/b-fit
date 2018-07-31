@@ -126,7 +126,7 @@
 	                }
 	              ],
 	              {
-	                colors: ['#a88add','#0cc2aa','#fcc100'],
+	                colors: ['#a88add','#9f1f63','#fcc100'],
 	                series: { shadowSize: 3 },
 	                xaxis: { show: true, font: { color: '#ccc' }, position: 'bottom' },
 	                yaxis:{ show: true, font: { color: '#ccc' }},
@@ -240,7 +240,7 @@
 	              ],
 	              {
 	                bars: { horizontal: true, show: true, fill: true,  barWidth: 0.3, lineWidth: 1, fillColor: { colors: [{ opacity: 0.8 }, { opacity: 1}] }, align: 'center' },
-	                colors: ['#0cc2aa'],
+	                colors: ['#9f1f63'],
 	                series: { shadowSize: 3 },
 	                xaxis: { show: true, font: { color: '#ccc' }, position: 'bottom' },
 	                yaxis:{ show: true, font: { color: '#ccc' }},
@@ -393,7 +393,7 @@
 		        <tbody>
 		          <tr>
 		            <td>
-		              <div ui-jp="sparkline" ui-refresh="app.setting.color" ui-options="[ 16,15,15,14,17,18,16,15,16 ], {type:'bar', height:19, barWidth:4, barSpacing:2, barColor:'#0cc2aa'}" class="sparkline inline">loading...</div>
+		              <div ui-jp="sparkline" ui-refresh="app.setting.color" ui-options="[ 16,15,15,14,17,18,16,15,16 ], {type:'bar', height:19, barWidth:4, barSpacing:2, barColor:'#9f1f63'}" class="sparkline inline">loading...</div>
 		            </td>
 		            <td>App downloads</td>
 		            <td class="text-success">
@@ -402,7 +402,7 @@
 		          </tr>
 		          <tr>
 		            <td class="text-center">
-		              <div ui-jp="sparkline" ui-refresh="app.setting.color" ui-options="[ 60,30,10 ], {type:'pie', height:19, sliceColors:['#fcc100','#fff','#0cc2aa']}" class="sparkline inline">loading...</div>
+		              <div ui-jp="sparkline" ui-refresh="app.setting.color" ui-options="[ 60,30,10 ], {type:'pie', height:19, sliceColors:['#fcc100','#fff','#9f1f63']}" class="sparkline inline">loading...</div>
 		            </td>
 		            <td>Social connection</td>
 		            <td class="text-success">
@@ -411,7 +411,7 @@
 		          </tr>
 		          <tr>
 		            <td>
-		              <div ui-jp="sparkline" ui-refresh="app.setting.color" ui-options="[ 16,15,15,14,17,18,16,15,16 ], {type:'line', height:19, width:60, lineColor:'#0cc2aa', fillColor:'transparent'}" class="sparkline inline">loading...</div>
+		              <div ui-jp="sparkline" ui-refresh="app.setting.color" ui-options="[ 16,15,15,14,17,18,16,15,16 ], {type:'line', height:19, width:60, lineColor:'#9f1f63', fillColor:'transparent'}" class="sparkline inline">loading...</div>
 		            </td>
 		            <td>Revenue</td>
 		            <td class="text-warning">
@@ -620,6 +620,6 @@
 
 
 <!-- ############ main_layout END-->
-<?php include "includes/scripts.php"; ?>
+<?php include "includes/all_scripts.php"; ?>
 </body>
 </html>

@@ -9,9 +9,9 @@
     <div class="navbar no-radius">
       <!-- brand -->
       <a class="navbar-brand">
-        <div ui-include="'./assets/images/logo.svg'"></div>
-        <img src="./assets/images/logo.png" alt="." class="hide">
-        <span class="hidden-folded inline">Flatkit</span>
+        <!-- <div ui-include="'./assets/images/logo.png'"></div> -->
+        <img src="./assets/images/logo.png" alt=".">
+        <span class="hidden-folded inline">B-FIT GYM</span>
       </a>
       <!-- / brand -->
     </div>
@@ -183,8 +183,8 @@
       </div>
       <div class="nav">
         <a class="nav-link" href="../">Help</a>
-        <a class="nav-link" href="http://themeforest.net/user/flatfull/portfolio?ref=flatfull">Contact Us</a>
+        <a class="nav-link" href="http://flitzen.in/">Contact Us</a>
       </div>
-    </div>
+    </div>  
   </div>
   <div ui-view class="app-body" id="view">

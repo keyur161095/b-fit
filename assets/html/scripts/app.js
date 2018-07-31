@@ -6,7 +6,7 @@
       version: '1.1.3',
       // for chart colors
       color: {
-        'primary':      '#0cc2aa',
+        'primary':      '#9f1f63',
         'accent':       '#a88add',
         'warn':         '#fcc100',
         'info':         '#6887ff',
@@ -25,7 +25,7 @@
     			warn: 'warn'
         },
         color: {
-	        primary:      '#0cc2aa',
+	        primary:      '#9f1f63',
 	        accent:       '#a88add',
 	        warn:         '#fcc100'
     	  },

@@ -1,0 +1,25 @@
+span.tooltiptext {
+    visibility: hidden;
+}
+
+i.text-danger:hover .tooltiptext {
+  visibility: visible;
+  background-color: #9f1f63;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+button#Inavtivated {
+    color: #7b797b;
+    font-weight: 600;
+    background-color: white;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #9f1f63;
+    border-radius: 4px;
+    margin-right: 10px;
+}

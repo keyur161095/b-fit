@@ -24,3 +24,4 @@
 <link rel="stylesheet" href="./assets/styles/app.css" type="text/css" />
 <!-- endbuild -->
 <link rel="stylesheet" href="./assets/styles/font.css" type="text/css" />
+<link rel="stylesheet" href="./assets/master.css" type="text/css">
