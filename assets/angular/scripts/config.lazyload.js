@@ -9,8 +9,8 @@
               module: true,
               serie: true,
               files: [
-                  '../assets/angular-motion/dist/angular-motion.min.css',
-                  '../assets/bootstrap-additions/dist/bootstrap-additions.min.css',
+                  'http://localhost/b-fit/assets/angular-motion/dist/angular-motion.min.css',
+                  'http://localhost/b-fit/assets/bootstrap-additions/dist/bootstrap-additions.min.css',
                   '../libs/angular/angular-strap/dist/angular-strap.js',
                   '../libs/angular/angular-strap/dist/angular-strap.tpl.js'
               ]

@@ -21,7 +21,7 @@ var MODULE_CONFIG = {
                       '../libs/jquery/footable/css/footable.core.css'
                     ],
     screenfull:     [
-                      './assets/libs/jquery/screenfull/dist/screenfull.min.js'
+                      'http://localhost/b-fit/assets/libs/jquery/screenfull/dist/screenfull.min.js'
                     ],
     sortable:       [
                       '../libs/jquery/html.sortable/dist/html.sortable.min.js'
@@ -35,7 +35,7 @@ var MODULE_CONFIG = {
                       '../libs/jquery/summernote/dist/summernote.js'
                     ],
     parsley:        [
-                      '../assets/libs/jquery/parsleyjs/dist/parsley.css',
+                      'http://localhost/b-fit/assets/libs/jquery/parsleyjs/dist/parsley.css',
                       '../libs/jquery/parsleyjs/dist/parsley.min.js'
                     ],
     select2:        [

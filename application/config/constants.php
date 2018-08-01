@@ -2,6 +2,9 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 define('BASE_URL', 'http://localhost/b-fit/');
+define('ASSETS', 'http://localhost/b-fit/assets');
+define('ANGULAR', BASE_URL.'assets/libs/angular');
+define('JQUERY', BASE_URL.'assets/libs/jquery');
 
 /*
 |--------------------------------------------------------------------------

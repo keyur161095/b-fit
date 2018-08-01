@@ -460,7 +460,7 @@
 	              <li class="list-item">
 	                <a herf class="list-left">
 	                	<span class="w-40 avatar">
-		                  <img src="./assets/images/a4.jpg" alt="...">
+		                  <img src="http://localhost/b-fit/assets/images/a4.jpg" alt="...">
 		                  <i class="on b-white bottom"></i>
 	                    </span>
 	                </a>
@@ -472,7 +472,7 @@
 	              <li class="list-item">
 	                <a herf class="list-left">
 	                  <span class="w-40 avatar">
-		                  <img src="./assets/images/a5.jpg" alt="...">
+		                  <img src="http://localhost/b-fit/assets/images/a5.jpg" alt="...">
 		                  <i class="on b-white bottom"></i>
 	                  </span>
 	                </a>
@@ -484,7 +484,7 @@
 	              <li class="list-item">
 	                <a herf class="list-left">
 	                  <span class="w-40 avatar">
-		                  <img src="./assets/images/a6.jpg" alt="...">
+		                  <img src="http://localhost/b-fit/assets/images/a6.jpg" alt="...">
 		                  <i class="away b-white bottom"></i>
 	                  </span>
 	                </a>
@@ -496,7 +496,7 @@
 	              <li class="list-item">
 	                <a herf class="list-left">
 	                  <span class="w-40 avatar">
-		                  <img src="./assets/images/a7.jpg" alt="...">
+		                  <img src="http://localhost/b-fit/assets/images/a7.jpg" alt="...">
 		                  <i class="busy b-white bottom"></i>
 	                  </span>
 	                </a>
@@ -584,7 +584,7 @@
 				  	<div class="streamline b-l m-b m-l">
 		              <div class="sl-item">
 		                <div class="sl-left">
-		                  <img src="./assets/images/a2.jpg" class="img-circle">
+		                  <img src="http://localhost/b-fit/assets/images/a2.jpg" class="img-circle">
 		                </div>
 		                <div class="sl-content">
 		                  <a href class="text-info">Louis Elliott</a><span class="m-l-sm sl-date">5 min ago</span>
@@ -593,7 +593,7 @@
 		              </div>
 		              <div class="sl-item">
 		                <div class="sl-left">
-		                  <img src="./assets/images/a5.jpg" class="img-circle">
+		                  <img src="http://localhost/b-fit/assets/images/a5.jpg" class="img-circle">
 		                </div>
 		                <div class="sl-content">
 		                  <a href class="text-info">Terry Moore</a><span class="m-l-sm sl-date">10 min ago</span>
@@ -602,7 +602,7 @@
 		              </div>
 		              <div class="sl-item">
 		                <div class="sl-left">
-		                  <img src="./assets/images/a8.jpg" class="img-circle">
+		                  <img src="http://localhost/b-fit/assets/images/a8.jpg" class="img-circle">
 		                </div>
 		                <div class="sl-content">
 		                  <a href class="text-info">Walter Paler</a><span class="m-l-sm sl-date">1 hour ago</span>

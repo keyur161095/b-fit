@@ -52,10 +52,11 @@ var uiLoad = uiLoad || {};
 		script.onerror = function (e) {
 			deferred.reject(e);
 		};
-		$document.body.appendChild(script);
+		$(document).ready(function(){$document.body.appendChild(script);
 		loaded[src] = deferred;
 
-		return deferred.promise();
+		return deferred.promise();})
+
 	};
 
 	/**

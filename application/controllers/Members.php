@@ -12,10 +12,10 @@ class Members extends CI_Controller
     $config['total_rows'] = $this->db->get('members')->num_rows();
     $config['per_page'] = 5;
     $config['num_links'] = 5;
-
-
     $this->pagination->initialize($config);
 
+
+    $data['results'] = $this->db->where('status', 1);
     $data['results'] = $this->db->get('members', $config['per_page'], $this->uri->segment(3));
     $this->load->view('all-members', $data);
   }
@@ -46,9 +46,13 @@ class Members extends CI_Controller
 
   public function inactivate_member()
   {
-      $id = $this->input->post('member_id');
-      $this->member_model->inactivate($id);
-      redirect('http://localhost/b-fit/index.php?/members/getAllMembers');
+      $data = array(
+        'id' => $this->input->post('member_id'),
+        'reason' => $this->input->post('reason')
+      );
+        $this->member_model->inactivate($data);
+        $this->session->set_flashdata('inactivated');
+        redirect('http://localhost/b-fit/index.php?/members/getAllMembers');
   }
 
 }

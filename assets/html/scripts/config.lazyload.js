@@ -9,7 +9,7 @@ var MODULE_CONFIG = {
                       '../libs/jquery/flot-spline/js/jquery.flot.spline.min.js',
                       '../libs/jquery/flot.orderbars/js/jquery.flot.orderBars.js'],
     vectorMap:      [ '../libs/jquery/bower-jvectormap/jquery-jvectormap-1.2.2.min.js',
-                      '../libs/jquery/bower-jvectormap/jquery-jvectormap.css', 
+                      '../libs/jquery/bower-jvectormap/jquery-jvectormap.css',
                       '../libs/jquery/bower-jvectormap/jquery-jvectormap-world-mill-en.js',
                       '../libs/jquery/bower-jvectormap/jquery-jvectormap-us-aea-en.js' ],
     dataTable:      [
@@ -21,7 +21,7 @@ var MODULE_CONFIG = {
                       '../libs/jquery/footable/css/footable.core.css'
                     ],
     screenfull:     [
-                      '../libs/jquery/screenfull/dist/screenfull.min.js'
+                      'http://localhost/b-fit/assets/libs/jquery/screenfull/dist/screenfull.min.js'
                     ],
     sortable:       [
                       '../libs/jquery/html.sortable/dist/html.sortable.min.js'
@@ -35,7 +35,7 @@ var MODULE_CONFIG = {
                       '../libs/jquery/summernote/dist/summernote.js'
                     ],
     parsley:        [
-                      '../assets/libs/jquery/parsleyjs/dist/parsley.css',
+                      'http://localhost/b-fit/assets/libs/jquery/parsleyjs/dist/parsley.css',
                       '../libs/jquery/parsleyjs/dist/parsley.min.js'
                     ],
     select2:        [

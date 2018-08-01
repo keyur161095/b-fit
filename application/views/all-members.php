@@ -13,8 +13,14 @@
     <h2>Active Gym Members</h2>
   </div>
 
-  <div >
-  <p style ="color: green; text-align: center; font-weight: 600; font-size:22px;"><?php echo $this->session->flashdata('member'); ?></p>
+  <div>
+    <?php if ($this->session->flashdata('member')): ?>
+      <p style ="color: green; text-align: center; font-weight: 600; font-size:22px;"><?php echo $this->session->flashdata('member'); ?></p>
+    <?php endif; ?>
+    <?php if ($this->session->flashdata('inactivated')): ?>
+      <?php //echo "<script>Snackbar.show({text: 'Example notification text.'});</script>"; ?>
+    <?php echo "<script>alert('keyur');</script>"; ?>
+    <?php endif; ?>
   </div>
 
   <div class="row p-a">
@@ -116,11 +122,11 @@
         <b><p style="font-size: 20px;">Are you sure to inactivate ?</p></b>
       </div>
       <div class="modal-body">
-          <?php $attributes = array('id' => '42', 'method' => 'post'); ?>
+          <?php $attributes = array('id' => 'inactivateForm', 'method' => 'post'); ?>
           <?php echo form_open(base_url().'index.php?/members/inactivate_member/',$attributes); ?>
-            <input type="text" name="member_id" id="member_idd" value="">
-            <label for="reason">Please keep a note of reason for leaving.</label><br>
-            <input type="textarea" name="reason">
+            <input type="hidden" name="member_id" id="member_id" value="">
+            <label for="reason">What is the reason for leaving of member?</label><br>
+            <input type="textarea" name="reason" required>
 
       </div>
 
@@ -128,6 +134,8 @@
           <button type="submit"  value="submit"class="btn btn-default">Inactivate</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
+
+        <?php echo form_close(); ?>
       <!-- </form> -->
     </div>
 
@@ -138,15 +146,14 @@
 
 <!-- ############ LAYOUT END-->
 <script>
-document.getElementById("#member_idd").value = "42";
-
-$('#inactiveReason').on('click' .text-danger, function (){
-  // var opener			=	e.relatedTarget;
-  // var member_id 		= $(opener).attr('data-id');
-  $('#member_id').find('[name="member_id"]').val(42);
+$(document).ready(function(){
+  $('#inactiveReason').on('shown.bs.modal', function (e){
+    var opener			=	e.relatedTarget;
+    var member_id 	= $(opener).attr('data-id');
+    $('#inactivateForm').find('[name="member_id"]').val(member_id);
+  });
 });
 </script>
 
-<?php include "includes/all_scripts.php"; ?>
 </body>
 </html>

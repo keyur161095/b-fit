@@ -9,8 +9,7 @@
     <div class="navbar no-radius">
       <!-- brand -->
       <a class="navbar-brand">
-        <!-- <div ui-include="'./assets/images/logo.png'"></div> -->
-        <img src="./assets/images/logo.png" alt=".">
+        <img src="http://localhost/b-fit/assets/images/logo.png" alt=".">
         <span class="hidden-folded inline">B-FIT GYM</span>
       </a>
       <!-- / brand -->
@@ -27,7 +26,7 @@
                 <a href="/b-fit" >
                   <span class="nav-icon">
                     <i class="material-icons">&#xe3fc;
-                      <span ui-include="'./assets/images/i_0.svg'"></span>
+                      <span ui-include="'http://localhost/b-fit/assets/images/i_0.svg'"></span>
                     </i>
                   </span>
                   <span class="nav-text">Dashboard</span>
@@ -44,7 +43,7 @@
                   </span>
                   <span class="nav-icon">
                     <i class="material-icons">&#xe5c3;
-                      <span ui-include="'./assets/images/i_1.svg'"></span>
+                      <span ui-include="'http://localhost/b-fit/assets/images/i_1.svg'"></span>
                     </i>
                   </span>
                   <span class="nav-text">Members</span>
@@ -56,7 +55,7 @@
                 <a href="widget.html" >
                   <span class="nav-icon">
                     <i class="material-icons">&#xe8d2;
-                      <span ui-include="'./assets/images/i_3.svg'"></span>
+                      <span ui-include="'http://localhost/b-fit/assets/images/i_3.svg'"></span>
                     </i>
                   </span>
                   <span class="nav-text">Expenses</span>
@@ -67,7 +66,7 @@
                 <a href="widget.html" >
                   <span class="nav-icon">
                     <i class="material-icons">&#xe8d2;
-                      <span ui-include="'./assets/images/i_3.svg'"></span>
+                      <span ui-include="'http://localhost/b-fit/assets/images/i_3.svg'"></span>
                     </i>
                   </span>
                   <span class="nav-text">Events</span>
@@ -78,7 +77,7 @@
                 <a href="widget.html" >
                   <span class="nav-icon">
                     <i class="material-icons">&#xe8d2;
-                      <span ui-include="'./assets/images/i_3.svg'"></span>
+                      <span ui-include="'http://localhost/b-fit/assets/images/i_3.svg'"></span>
                     </i>
                   </span>
                   <span class="nav-text">Contacts</span>
@@ -89,7 +88,7 @@
                 <a>
                   <span class="nav-icon">
                     <i class="material-icons">&#xe8f0;
-                      <span ui-include="'./assets/images/i_2.svg'"></span>
+                      <span ui-include="'http://localhost/b-fit/assets/images/i_2.svg'"></span>
                     </i>
                   </span>
                   <span class="nav-text">Reports</span>
@@ -100,19 +99,7 @@
 
         </nav>
     </div>
-    <!-- <div class="b-t">
-      <div class="nav-fold">
-        <a href="profile.html">
-            <span class="pull-left">
-              <img src="./assets/images/a0.jpg" alt="..." class="w-40 img-circle">
-            </span>
-            <span class="clear hidden-folded p-x">
-              <span class="block _500">Jean Reyes</span>
-              <small class="block text-muted"><i class="fa fa-circle text-success m-r-sm"></i>online</small>
-            </span>
-        </a>
-      </div>
-    </div> -->
+
   </div>
 </div>
 <!-- / -->
@@ -135,15 +122,21 @@
             <!-- link and dropdown -->
             <ul class="nav navbar-nav mr-auto">
               <li class="nav-item dropdown">
-                <a class="nav-link" href data-toggle="dropdown">
-                  <i class="fa fa-fw fa-plus text-muted"></i>
-                  <span>New</span>
+                <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Add New
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                  <li><a href="<?=BASE_URL?>index.php?/members/addmember">Member</a></li>
+                  <li><a href="#">Expense</a></li>
+                  <li><a href="#">Contact</a></li>
+                  </ul>
+                </div>
                 </a>
-                <div ui-include="'./assets/views/blocks/dropdown.new.html'"></div>
+                <div ui-include="'/new-dropdown.html'"></div>
               </li>
             </ul>
 
-            <div ui-include="'./assets/views/blocks/navbar.form.html'"></div>
+            <div ui-include="'http://localhost/b-fit/assets/views/blocks/navbar.form.html'"></div>
             <!-- / -->
           </div>
           <!-- / navbar collapse -->
@@ -155,16 +148,16 @@
                 <i class="material-icons">&#xe7f5;</i>
                 <span class="label label-sm up warn">3</span>
               </a>
-              <div ui-include="'./assets/views/blocks/dropdown.notification.html'"></div>
+              <div ui-include="'http://localhost/b-fit/assets/views/blocks/dropdown.notification.html'"></div>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link p-0 clear" href="#" data-toggle="dropdown">
                 <span class="avatar w-32">
-                  <img src="./assets/images/a0.jpg" alt="...">
+                  <img src="http://localhost/b-fit/assets/images/a0.jpg" alt="...">
                   <i class="on b-white bottom"></i>
                 </span>
               </a>
-              <div ui-include="'./assets/views/blocks/dropdown.user.html'"></div>
+              <div ui-include="'http://localhost/b-fit/assets/views/blocks/dropdown.user.html'"></div>
             </li>
             <li class="nav-item hidden-md-up">
               <a class="nav-link pl-2" data-toggle="collapse" data-target="#collapse">
@@ -185,6 +178,6 @@
         <a class="nav-link" href="../">Help</a>
         <a class="nav-link" href="http://flitzen.in/">Contact Us</a>
       </div>
-    </div>  
+    </div>
   </div>
   <div ui-view class="app-body" id="view">

@@ -94,7 +94,7 @@
       var slides = vm.slides = [];
       $scope.addSlide = function() {
         slides.push({
-          image: './assets/images/c' + slides.length + '.jpg',
+          image: 'http://localhost/b-fit/assets/images/c' + slides.length + '.jpg',
           text: ['Carousel text #0','Carousel text #1','Carousel text #2','Carousel text #3'][slides.length % 4]
         });
       };
