@@ -11,7 +11,6 @@ class Members extends CI_Controller
     $config['base_url'] = 'http://localhost/b-fit/index.php?/members/getAllMembers';
     $config['total_rows'] = $this->db->get('members')->num_rows();
     $config['per_page'] = 5;
-    $config['num_links'] = 5;
     $this->pagination->initialize($config);
 
 
@@ -40,7 +39,7 @@ class Members extends CI_Controller
                   );
 
     $this->member_model->add($data);
-    $this->session->set_flashdata('member', 'New member has been added');
+    $this->session->set_flashdata('newMember', 'New member has been added');
     redirect('index.php?/members/getAllMembers');
   }
 
@@ -51,8 +50,29 @@ class Members extends CI_Controller
         'reason' => $this->input->post('reason')
       );
         $this->member_model->inactivate($data);
-        $this->session->set_flashdata('inactivated');
+        $this->session->set_flashdata('inactivated', 'Member inactivated');
         redirect('http://localhost/b-fit/index.php?/members/getAllMembers');
+  }
+
+  public function getInactiveMembers()
+  {
+
+    $config['base_url'] = BASE_URL.'members/getInactiveMembers';
+    $config['total_rows'] = $this->db->get('members')->num_rows();
+    $config['per_page'] = 2;
+    $this->pagination->initialize($config);
+
+    $data['results'] = $this->db->where('status', 0);
+    $data['results'] = $this->db->get('members', $config['per_page'], $this->uri->segment(3));
+    $this->load->view('inactivated_members', $data);
+  }
+
+  public function activate_member()
+  {
+        $id = $this->input->post('member_id');
+        $this->member_model->activate($id);
+        $this->session->set_flashdata('activated', 'Member is now active');
+        redirect('http://localhost/b-fit/index.php?/members/getInactiveMembers');
   }
 
 }

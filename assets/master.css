@@ -4,7 +4,7 @@ span.tooltiptext {
 
 i.text-danger:hover .tooltiptext {
   visibility: visible;
-  background-color: #9f1f63;
+  background-color: red;
   color: white;
   text-align: center;
   border-radius: 6px;
@@ -12,6 +12,19 @@ i.text-danger:hover .tooltiptext {
   margin-left: 5px;
   font-size: 16px;
 }
+
+i.fa.fa-check-circle-o.text-success:hover .tooltiptext {
+  visibility: visible;
+  background-color: green;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+
 
 button#Inavtivated {
     color: #7b797b;

@@ -10,18 +10,13 @@
 
 <div class="box" style = "margin-left: 14px;">
   <div class="box-header">
-    <h2 style="color:green;">Active Gym Members</h2>
+    <h2 style="color:red;">Inactive Members</h2>
   </div>
 
   <div>
-    <?php if ($this->session->flashdata('newMember')): ?>
-      <!-- <p style ="color: green; text-align: center; font-weight: 600; font-size:22px;"><?php echo $this->session->flashdata('member'); ?></p> -->
-      <script>Snackbar.show({text:'<b style="font-size:16px;">New member has been added</b>'});</script>
+    <?php if ($this->session->flashdata('activated')): ?>
+      <script>Snackbar.show({text:'<b style="font-size:16px;">Member Activated Successfully</b>'});</script>
     <?php endif; ?>
-
-    <?php if ($this->session->flashdata('inactivated')): ?>
-      <script>Snackbar.show({text:'<b style="font-size:16px;">Member Inactivated Successfully</b>'});</script>
-    <?php endif; ?>        
   </div>
 
   <div class="row p-a">
@@ -37,7 +32,7 @@
     </div>
     <div class="col-sm-3">
       <div class="input-group input-group-sm">
-        <button type="button" id="Inavtivated" name="Inavtivated" onclick="window.location.href='<?=BASE_URL?>index.php?/members/getInactiveMembers'">Show Inavtivated Members</button>
+        <button type="button" id="Inavtivated" name="Inavtivated" onclick="window.location.href='<?=BASE_URL?>index.php?/members/getAllMembers'">Show Active Members</button>
         <input type="text" class="form-control" placeholder="Search">
         <span class="input-group-btn">
           <button class="btn b-a white" type="button">Go!</button>
@@ -78,7 +73,7 @@
               echo '<td>'.$row->join_date.'</td>';
               echo '<td>'.$row->plan.'</td>';
               // echo '<td style="width:200px;"><a href="' .base_url(). 'index.php?/members/inactivate_member/' .$row->id. '"><i class="fa fa-times text-danger"><span class="tooltiptext">Inactivate member</span></i></a></td>';
-              echo '<td style="width:200px;"><i class="fa fa-times text-danger" data-toggle="modal" data-target="#inactiveReason" data-id='.$row->id.'><span class="tooltiptext">Inactivate member</span></i></td>';
+              echo '<td style="width:200px;"><i class="fa fa-check-circle-o text-success" style="font-size:18px;" data-toggle="modal" data-target="#activeAgain" data-id='.$row->id.'><span class="tooltiptext">Activate member</span></i></td>';
               echo '</tr>';
             }
           }
@@ -111,28 +106,25 @@
 
 <!-- Pop up-->
 
-<div id="inactiveReason" class="modal fade" role="dialog">
+<div id="activeAgain" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Inactivate Member</h4>
+        <h4 class="modal-title">Activate Member</h4>
       </div>
       <div class="modal-body">
-        <b><p style="font-size: 20px;">Are you sure to inactivate ?</p></b>
+        <b><p style="font-size: 20px;">Are you sure to activate member again?</p></b>
       </div>
       <div class="modal-body">
-          <?php $attributes = array('id' => 'inactivateForm', 'method' => 'post'); ?>
-          <?php echo form_open(base_url().'index.php?/members/inactivate_member/',$attributes); ?>
+          <?php $attributes = array('id' => 'activateForm', 'method' => 'post'); ?>
+          <?php echo form_open(base_url().'index.php?/members/activate_member/',$attributes); ?>
             <input type="hidden" name="member_id" id="member_id" value="">
-            <label for="reason">What is the reason for leaving of member?</label><br>
-            <input type="textarea" name="reason" required>
-
       </div>
 
         <div class="modal-footer">
-          <button type="submit"  value="submit"class="btn btn-default">Inactivate</button>
+          <button type="submit"  value="submit"class="btn btn-default">Activate</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
 
@@ -148,10 +140,10 @@
 <!-- ############ LAYOUT END-->
 <script>
 $(document).ready(function(){
-  $('#inactiveReason').on('shown.bs.modal', function (e){
+  $('#activeAgain').on('shown.bs.modal', function (e){
     var opener			=	e.relatedTarget;
     var member_id 	= $(opener).attr('data-id');
-    $('#inactivateForm').find('[name="member_id"]').val(member_id);
+    $('#activateForm').find('[name="member_id"]').val(member_id);
   });
 });
 </script>

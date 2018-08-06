@@ -104,6 +104,5 @@
 
 <!-- ############ main_layout END-->
   </div>
-<?php include "includes/all_scripts.php"; ?>
 </body>
 </html>
