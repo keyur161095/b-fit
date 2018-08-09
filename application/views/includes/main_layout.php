@@ -127,7 +127,7 @@
                   <span class="caret"></span></button>
                   <ul class="dropdown-menu">
                   <li><a href="<?=BASE_URL?>index.php?/members/addmember">Member</a></li>
-                  <li><a href="#">Expense</a></li>
+                  <li><a href="<?=BASE_URL?>index.php?/expenses/add_expenses_view">Expense</a></li>
                   <li><a href="#">Contact</a></li>
                   </ul>
                 </div>
