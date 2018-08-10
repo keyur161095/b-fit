@@ -23,8 +23,11 @@
       <div class="box-body">
 
         <!-- <form role="form"> -->
+        <?php echo $error;?>
+
         <?php $attributes = array('method' => 'post', 'id' => 'expenseForm'); ?>
-        <?php echo form_open(BASE_URL.'index.php?/expenses/submit_expense', $attributes); ?>
+
+        <?php echo form_open_multipart(BASE_URL.'index.php?/expenses/do_upload', $attributes); ?>
           <div class="form-group">
             <label for="ex-type">Expense for</label>
             <input type="text" class="form-control" id="ex-type" name="expenseType" placeholder="What is this expense for?" required>
@@ -40,7 +43,7 @@
           </div>
           <div class="form-group">
             <label for="exampleInputFile">Attachment</label>
-            <input type="file" id="exampleInputFile" class="form-control">
+            <input type="file" size="20" id="billImage" class="form-control">
             <p class="help-block">Upload bill here (Image or PDF)</p>
           </div>
           <button type="submit" class="btn white m-b">Submit</button>
