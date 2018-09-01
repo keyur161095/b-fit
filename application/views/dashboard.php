@@ -20,12 +20,8 @@
 		</div>
 		<div class="col-sm-6 text-sm-right">
 			<div class="m-y-sm">
-				<span class="m-r-sm">Total days since opening</span>
-				<div class="btn-group dropdown">
-		          <button class="btn white btn-sm ">Projects</button>
-		          <button class="btn white btn-sm dropdown-toggle" data-toggle="dropdown"></button>
-		        </div>
-	        </div>
+				<span class="m-r-sm">Total days since opening: 5555</span>
+			</div>
 		</div>
 	</div>
 </div>
@@ -39,8 +35,8 @@
 	            </span>
 	          </div>
 	          <div class="clear">
-	            <h4 class="m-0 text-lg _300"><a href>125 <span class="text-sm">Active Members</span></a></h4>
-	            <small class="text-muted">6 new added this in july.</small>
+	            <h4 class="m-0 text-lg _300"><a href><?php echo $total_members; ?> <span class="text-sm">Active Members</span></a></h4>
+	            <small class="text-muted"><?php echo $members_added_in_current_month; ?> new members in <?php echo date('M'); ?>.</small>
 	          </div>
 	        </div>
 	    </div>
