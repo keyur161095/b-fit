@@ -35,7 +35,7 @@
 	            </span>
 	          </div>
 	          <div class="clear">
-	            <h4 class="m-0 text-lg _300"><a href><?php echo $total_members; ?> <span class="text-sm">Active Members</span></a></h4>
+	            <h4 class="m-0 text-lg _300"><a href><?php echo $total_active_members; ?> <span class="text-sm">Active Members</span></a></h4>
 	            <small class="text-muted"><?php echo $members_added_in_current_month; ?> new members in <?php echo date('M'); ?>.</small>
 	          </div>
 	        </div>
@@ -48,7 +48,19 @@
 	            </span>
 	          </div>
 	          <div class="clear">
-	            <h4 class="m-0 text-lg _300"><a href>40 <span class="text-sm">Projects</span></a></h4>
+	            <h4 class="m-0 text-lg _300"><a href>
+
+                <?php foreach ($total_expense_this_month as $key)
+                {
+                if ($key === NULL) {
+                  echo "₹ 0";
+                }
+                else {
+                  echo "₹ {$key}";
+                }
+                }
+                ?>
+                <span class="text-sm">Expense this month</span></a></h4>
 	            <small class="text-muted">38 open.</small>
 	          </div>
 	        </div>
@@ -616,6 +628,5 @@
 
 
 <!-- ############ main_layout END-->
-<?php include "includes/all_scripts.php"; ?>
 </body>
 </html>
