@@ -46,7 +46,7 @@ class Members extends CI_Controller
   public function inactivate_member()
   {
       $data = array(
-        'id' => $this->input->post('member_id'),
+        'id'     => $this->input->post('member_id'),
         'reason' => $this->input->post('reason')
       );
         $this->member_model->inactivate($data);
@@ -74,5 +74,10 @@ class Members extends CI_Controller
         $this->session->set_flashdata('activated', 'Member is now active');
         redirect('http://localhost/b-fit/index.php?/members/getInactiveMembers');
   }
+
+  // public function addFee()
+  // {
+  //   $this->input->post();
+  // }
 
 }

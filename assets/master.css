@@ -2,6 +2,7 @@ span.tooltiptext {
     visibility: hidden;
 }
 
+/* For active members */
 i.text-danger:hover .tooltiptext {
   visibility: visible;
   background-color: red;
@@ -13,6 +14,7 @@ i.text-danger:hover .tooltiptext {
   font-size: 16px;
 }
 
+/* For inactivated memebers */
 i.fa.fa-check-circle-o.text-success:hover .tooltiptext {
   visibility: visible;
   background-color: green;
@@ -24,7 +26,17 @@ i.fa.fa-check-circle-o.text-success:hover .tooltiptext {
   font-size: 16px;
 }
 
-
+/* add member fee */
+i.text-success:hover .tooltiptext {
+  visibility: visible;
+  background-color: green;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  margin-left: 5px;
+  font-size: 16px;
+}
 
 button#Inavtivated {
     color: #7b797b;

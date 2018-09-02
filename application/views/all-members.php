@@ -21,7 +21,7 @@
 
     <?php if ($this->session->flashdata('inactivated')): ?>
       <script>Snackbar.show({text:'<b style="font-size:16px;">Member Inactivated Successfully</b>'});</script>
-    <?php endif; ?>        
+    <?php endif; ?>
   </div>
 
   <div class="row p-a">
@@ -78,7 +78,10 @@
               echo '<td>'.$row->join_date.'</td>';
               echo '<td>'.$row->plan.'</td>';
               // echo '<td style="width:200px;"><a href="' .base_url(). 'index.php?/members/inactivate_member/' .$row->id. '"><i class="fa fa-times text-danger"><span class="tooltiptext">Inactivate member</span></i></a></td>';
-              echo '<td style="width:200px;"><i class="fa fa-times text-danger" data-toggle="modal" data-target="#inactiveReason" data-id='.$row->id.'><span class="tooltiptext">Inactivate member</span></i></td>';
+              echo '<td style="width:200px;">
+              <i class="fa fa-times text-danger" data-toggle="modal" data-target="#inactiveReason" data-id='.$row->id.'><span class="tooltiptext">Inactivate member</span></i>
+              <i class="fa fa-money text-success" data-toggle="modal" data-target="#addFee" data-id='.$row->id.'><span class="tooltiptext">Add Fee</span></i>
+              </td>';
               echo '</tr>';
             }
           }
@@ -109,8 +112,7 @@
   </footer>
 </div>
 
-<!-- Pop up-->
-
+<!-- Pop up Model for inactivate member-->
 <div id="inactiveReason" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
@@ -120,15 +122,14 @@
         <h4 class="modal-title">Inactivate Member</h4>
       </div>
       <div class="modal-body">
-        <b><p style="font-size: 20px;">Are you sure to inactivate ?</p></b>
+        <b><p style="font-size: 20px;">Are you sure to inactivate?</p></b>
       </div>
       <div class="modal-body">
           <?php $attributes = array('id' => 'inactivateForm', 'method' => 'post'); ?>
-          <?php echo form_open(base_url().'index.php?/members/inactivate_member/',$attributes); ?>
+          <?php echo form_open(base_url().'index.php?/members/inactivate_member/', $attributes); ?>
             <input type="hidden" name="member_id" id="member_id" value="">
             <label for="reason">What is the reason for leaving of member?</label><br>
             <input type="textarea" name="reason" required>
-
       </div>
 
         <div class="modal-footer">
@@ -143,6 +144,35 @@
   </div>
 </div>
 
+<!-- Pop up Model for add fee-->
+<div id="addFee" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Add Member's Fee</h4>
+      </div>
+      <div class="modal-body">
+          <?php $attributes = array('id' => 'addFeeForm', 'method' => 'post'); ?>
+          <?php echo form_open(base_url().'index.php?/members/inactivate_member/',$attributes); ?>
+            <input type="hidden" name="member_id" id="member_id" value="">
+            <label for="amount">Enter amount</label><br>
+            <input type="number" name="amount" required>
+            <hr>
+            <div>
+              <label for="date">Date</label><br>
+              <input type="date" name="dateAdded">
+            </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit"  value="submit"class="btn btn-default">Add</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+        <?php echo form_close(); ?>
+    </div>
+  </div>
+</div>
+
 <!-- ############ PAGE END-->
 
 <!-- ############ LAYOUT END-->
@@ -152,6 +182,12 @@ $(document).ready(function(){
     var opener			=	e.relatedTarget;
     var member_id 	= $(opener).attr('data-id');
     $('#inactivateForm').find('[name="member_id"]').val(member_id);
+  });
+
+  $('#addFee').on('shown.bs.modal', function (e){
+    var opener			=	e.relatedTarget;
+    var member_id 	= $(opener).attr('data-id');
+    $('#addFeeForm').find('[name="member_id"]').val(member_id);
   });
 });
 </script>
