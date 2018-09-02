@@ -61,8 +61,8 @@
 	            </span>
 	          </div>
 	          <div class="clear">
-	            <h4 class="m-0 text-lg _300"><a href>600 <span class="text-sm">Total Members</span></a></h4>
-	            <small class="text-muted">632 vips.</small>
+	            <h4 class="m-0 text-lg _300"><a href><?php echo $total_members; ?> <span class="text-sm">Total Members</span></a></h4>
+	            <small class="text-muted">Active + Inactive</small>
 	          </div>
 	        </div>
 	    </div>
