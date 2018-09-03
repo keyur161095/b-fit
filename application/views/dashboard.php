@@ -4,6 +4,12 @@
 <html lang="en">
 <head>
   <?php include "includes/header.php"; ?>
+  <script type="text/javascript">
+    var openingDate = new Date("01/01/2017");
+    var Today = new Date();
+    var timeDiff = Math.abs(Today.getTime() - openingDate.getTime());
+    var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+  </script>
 </head>
 <body>
   <div class="app" id="app">
@@ -20,7 +26,9 @@
 		</div>
 		<div class="col-sm-6 text-sm-right">
 			<div class="m-y-sm">
-				<span class="m-r-sm">Total days since opening: 5555</span>
+				<span class="m-r-sm" id="sinceOpening" style="font-weight: 600;"></span>
+        <!-- <span class="tooltiptext">Opening date: 01/01/2017</span> -->
+        <script type="text/javascript">document.getElementById("sinceOpening").innerHTML="Total days since opening: " + diffDays;</script>
 			</div>
 		</div>
 	</div>
@@ -61,7 +69,7 @@
                 }
                 ?>
                 <span class="text-sm">Expense this month</span></a></h4>
-	            <small class="text-muted">38 open.</small>
+	            <small class="text-muted"><?php echo date("M-Y"); ?></small>
 	          </div>
 	        </div>
 	    </div>
@@ -73,8 +81,8 @@
 	            </span>
 	          </div>
 	          <div class="clear">
-	            <h4 class="m-0 text-lg _300"><a href><?php echo $total_members; ?> <span class="text-sm">Total Members</span></a></h4>
-	            <small class="text-muted">Active + Inactive</small>
+	            <h4 class="m-0 text-lg _300"><a href><?php echo "₹ ".$total_fees['sum']; ?> <span class="text-sm">Total fees collected this month</span></a></h4>
+	            <small class="text-muted"><?php echo date("M-Y"); ?></small>
 	          </div>
 	        </div>
 	    </div>

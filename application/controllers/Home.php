@@ -20,8 +20,10 @@ class Home extends CI_Controller
     $expense_query = $this->db->query('SELECT SUM(amount) FROM expenses WHERE MONTH(date) = MONTH(CURRENT_DATE) AND YEAR(date) = YEAR(CURRENT_DATE)');
     $data['total_expense_this_month'] = $expense_query->row();
 
-    //Total members all time (Active + Inactive)
-    $data['total_members'] = $this->db->get('members')->num_rows();
+    //Total fess collected this month
+    $currentMonth = date("Y-m");
+    $qry_total_fee = $this->db->query("SELECT SUM(amount) AS sum FROM `fees` WHERE forMonth LIKE '$currentMonth'");
+    $data['total_fees'] = $qry_total_fee->row_array();
 
     $this->load->view('dashboard', $data);
   }
