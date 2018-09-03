@@ -118,8 +118,7 @@
         <b><p style="font-size: 20px;">Are you sure to activate member again?</p></b>
       </div>
       <div class="modal-body">
-          <?php $attributes = array('id' => 'activateForm', 'method' => 'post'); ?>
-          <?php echo form_open(base_url().'index.php?/members/activate_member/',$attributes); ?>
+          <form id="activateForm" action="index.php?/members/activate_member/" method="post">
             <input type="hidden" name="member_id" id="member_id" value="">
       </div>
 
@@ -127,8 +126,7 @@
           <button type="submit"  value="submit"class="btn btn-default">Activate</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
-
-        <?php echo form_close(); ?>
+      </form>
       <!-- </form> -->
     </div>
 

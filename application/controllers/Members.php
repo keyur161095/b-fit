@@ -10,7 +10,7 @@ class Members extends CI_Controller
   {
     $config['base_url'] = 'http://localhost/b-fit/index.php?/members/getAllMembers';
     $config['total_rows'] = $this->db->get('members')->num_rows();
-    $config['per_page'] = 5;
+    $config['per_page'] = 10;
     $this->pagination->initialize($config);
 
 
@@ -59,7 +59,7 @@ class Members extends CI_Controller
 
     $config['base_url'] = BASE_URL.'members/getInactiveMembers';
     $config['total_rows'] = $this->db->get('members')->num_rows();
-    $config['per_page'] = 2;
+    $config['per_page'] = 10;
     $this->pagination->initialize($config);
 
     $data['results'] = $this->db->where('status', 0);

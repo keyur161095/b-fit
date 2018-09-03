@@ -115,7 +115,6 @@
 <!-- Pop up Model for inactivate member-->
 <div id="inactiveReason" class="modal fade" role="dialog">
   <div class="modal-dialog">
-
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -125,19 +124,16 @@
         <b><p style="font-size: 20px;">Are you sure to inactivate?</p></b>
       </div>
       <div class="modal-body">
-          <?php $attributes = array('id' => 'inactivateForm', 'method' => 'post'); ?>
-          <?php echo form_open(base_url().'index.php?/members/inactivate_member/', $attributes); ?>
+          <form id="inactivateForm" action="index.php?/members/inactivate_member/" method="post">
             <input type="hidden" name="member_id" id="member_id" value="">
             <label for="reason">What is the reason for leaving of member?</label><br>
             <input type="textarea" name="reason" required>
       </div>
-
         <div class="modal-footer">
           <button type="submit"  value="submit"class="btn btn-default">Inactivate</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
-
-        <?php echo form_close(); ?>
+      </form>
       <!-- </form> -->
     </div>
 
