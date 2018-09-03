@@ -15,13 +15,17 @@
 
   <div>
     <?php if ($this->session->flashdata('newMember')): ?>
-      <!-- <p style ="color: green; text-align: center; font-weight: 600; font-size:22px;"><?php echo $this->session->flashdata('member'); ?></p> -->
       <script>Snackbar.show({text:'<b style="font-size:16px;">New member has been added</b>'});</script>
     <?php endif; ?>
 
     <?php if ($this->session->flashdata('inactivated')): ?>
       <script>Snackbar.show({text:'<b style="font-size:16px;">Member Inactivated Successfully</b>'});</script>
     <?php endif; ?>
+
+    <?php if($this->session->flashdata('feeAdded')): ?>
+      <script>Snackbar.show({text:'<b style="font-size:16px;">Fee added successfully</b>'});</script>
+    <?php endif; ?>
+
   </div>
 
   <div class="row p-a">
@@ -149,8 +153,7 @@
         <h4 class="modal-title">Add Member's Fee</h4>
       </div>
       <div class="modal-body">
-          <?php $attributes = array('id' => 'addFeeForm', 'method' => 'post'); ?>
-          <?php echo form_open(base_url().'index.php?/members/inactivate_member/',$attributes); ?>
+          <form id="addFeeForm" action="index.php?/members/addFee/" method="post">
             <input type="hidden" name="member_id" id="member_id" value="">
             <label for="amount">Enter amount</label><br>
             <input type="number" name="amount" required>
@@ -164,7 +167,7 @@
         <button type="submit"  value="submit"class="btn btn-default">Add</button>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
-        <?php echo form_close(); ?>
+        </form>
     </div>
   </div>
 </div>

@@ -21,10 +21,10 @@ class Member_model extends CI_Model
     $this->db->update('members', array('status' => 1));
   }
 
-  // public function addFee()
-  // {
-  //
-  // }
+  public function addFee($data)
+  {
+    $this->db->insert('fees', $data);
+  }
 
 }
 
