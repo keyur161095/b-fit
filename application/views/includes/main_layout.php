@@ -128,7 +128,7 @@
                   <ul class="dropdown-menu">
                   <li><a href="<?=BASE_URL?>index.php?/members/addmember">Member</a></li>
                   <li><a href="<?=BASE_URL?>index.php?/expenses/add_expenses_view">Expense</a></li>
-                  <li><a href="#">Member's Fee</a></li>
+                  <li><a href="<?=BASE_URL?>index.php?/members/getallmembers">Member's Fee</a></li>
                   <li><a href="#">Contact</a></li>
                   </ul>
                 </div>

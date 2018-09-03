@@ -159,8 +159,8 @@
             <input type="number" name="amount" required>
             <hr>
             <div>
-              <label for="date">Date</label><br>
-              <input type="date" name="dateAdded">
+              <label for="month">Date</label><br>
+              <input type="month" name="forMonth">
             </div>
       </div>
       <div class="modal-footer">

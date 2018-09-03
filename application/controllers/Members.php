@@ -15,6 +15,7 @@ class Members extends CI_Controller
 
 
     $data['results'] = $this->db->where('status', 1);
+    $data['results'] = $this->db->order_by('id', 'desc');
     $data['results'] = $this->db->get('members', $config['per_page'], $this->uri->segment(3));
     $this->load->view('all-members', $data);
   }
@@ -71,39 +72,58 @@ class Members extends CI_Controller
 
   public function submit() // Submit form in add member view
   {
-    $data = array(
-                  'name' => $this->input->post('name'),
-                  'join_date' => $this->input->post('join_date'),
-                  'plan' => $this->input->post('plan'),
-                  'email' => $this->input->post('email'),
-                  'mobile_number' => $this->input->post('contact'),
-                  'weight' => $this->input->post('weight'),
-                  'address' => $this->input->post('address'),
-                  'birth_date' => $this->input->post('birth_date'),
-                  'notes' => $this->input->post('notes')
-                  );
+    if ($this->input->post('name')) {
+      $data = array(
+                    'name' => $this->input->post('name'),
+                    'join_date' => $this->input->post('join_date'),
+                    'status' => 1,
+                    'plan' => $this->input->post('plan'),
+                    'email' => $this->input->post('email'),
+                    'mobile_number' => $this->input->post('contact'),
+                    'weight' => $this->input->post('weight'),
+                    'address' => $this->input->post('address'),
+                    'birth_date' => $this->input->post('birth_date'),
+                    'notes' => $this->input->post('notes')
+                    );
 
-    $this->member_model->add($data);
-    $this->session->set_flashdata('newMember', 'New member has been added');
-    redirect('index.php?/members/getAllMembers');
+      $this->member_model->add($data);
+      $this->session->set_flashdata('newMember', 'New member has been added');
+      redirect('index.php?/members/getAllMembers');
+    }
+    else {
+      echo "Something went wrong";
+    }
+
   }
 
   public function addFee()
   {
     if ($this->input->post('member_id')) {
       $memberId = $this->input->post('member_id');
-      // $memberName = $this->db->query('SELECT name from members WHERE id = "$memberId"');
+      //To get member id from member table
+      $memberIdQry = $this->db->query("SELECT plan FROM members where id = '$memberId'");
+      $memberplan = $memberIdQry->row_array();
+
+      //To get member name from member table
+      $memberNameQry = $this->db->query("SELECT name FROM members WHERE id = '$memberId'");
+      $memberName = $memberNameQry->row_array();
+
       $data = array(
         'amount'      => $this->input->post('amount'),
-        // 'member_name' => $memberName,
+        'member_name' => $memberName['name'],
         'member_id'   => $memberId,
-        'date'        => $this->input->post('dateAdded')
+        'forMonth'    => $this->input->post('forMonth'),
+        'plan'        => $memberplan['plan']
     );
     $this->member_model->addFee($data);
     $this->session->set_flashdata('feeAdded', 'Fee added successfully');
     redirect('index.php?/members/getAllMembers');
     }
     else {
+      $memberId = $this->input->post('member_id');
+      $qry = $this->db->query("SELECT plan FROM members where id = '$memberId'");
+      $memberplan = $qry->row_array();
+      var_dump($memberplan);
       echo "something went wrong";
     }
   }
