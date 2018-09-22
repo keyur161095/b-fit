@@ -154,13 +154,13 @@
       </div>
       <div class="modal-body">
           <form id="addFeeForm" action="index.php?/members/addFee/" method="post">
-            <input type="hidden" name="member_id" id="member_id" value="">
+            <input type="hidden" name="member_id" id="member_id" value="" required>
             <label for="amount">Enter amount</label><br>
             <input type="number" name="amount" required>
             <hr>
             <div>
               <label for="month">Date</label><br>
-              <input type="month" name="forMonth">
+              <input type="month" name="forMonth" required>
             </div>
       </div>
       <div class="modal-footer">

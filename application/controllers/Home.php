@@ -22,7 +22,7 @@ class Home extends CI_Controller
 
     //Total fess collected this month
     $currentMonth = date("Y-m");
-    $qry_total_fee = $this->db->query("SELECT SUM(amount) AS sum FROM `fees` WHERE forMonth LIKE '$currentMonth'");
+    $qry_total_fee = $this->db->query("SELECT SUM(amount) AS sum FROM `fees` WHERE forMonth LIKE '$currentMonth%'");
     $data['total_fees'] = $qry_total_fee->row_array();
 
     $this->load->view('dashboard', $data);
