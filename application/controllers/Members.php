@@ -112,7 +112,7 @@ class Members extends CI_Controller
         'amount'      => $this->input->post('amount'),
         'member_name' => $memberName['name'],
         'member_id'   => $memberId,
-        'forMonth'    => $this->input->post('forMonth').,
+        'forMonth'    => $this->input->post('forMonth'),
         'plan'        => $memberplan['plan']
     );
     $this->member_model->addFee($data);

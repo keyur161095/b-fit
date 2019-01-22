@@ -52,7 +52,7 @@
               </li>
 
               <li>
-                <a href="widget.html" >
+                <a href="<?php echo BASE_URL; ?>index.php?/expenses/add_expenses_view">
                   <span class="nav-icon">
                     <i class="material-icons">&#xe8d2;
                       <span ui-include="'http://localhost/b-fit/assets/images/i_3.svg'"></span>
@@ -63,18 +63,18 @@
               </li>
 
               <li>
-                <a href="widget.html" >
+                <a href="<?php echo BASE_URL; ?>index.php?/members/getallmembers" >
                   <span class="nav-icon">
                     <i class="material-icons">&#xe8d2;
                       <span ui-include="'http://localhost/b-fit/assets/images/i_3.svg'"></span>
                     </i>
                   </span>
-                  <span class="nav-text">Events</span>
+                  <span class="nav-text">Member's Fee</span>
                 </a>
               </li>
 
               <li>
-                <a href="widget.html" >
+                <a href="#" >
                   <span class="nav-icon">
                     <i class="material-icons">&#xe8d2;
                       <span ui-include="'http://localhost/b-fit/assets/images/i_3.svg'"></span>
@@ -85,7 +85,7 @@
               </li>
 
               <li>
-                <a>
+                <a href="#">
                   <span class="nav-icon">
                     <i class="material-icons">&#xe8f0;
                       <span ui-include="'http://localhost/b-fit/assets/images/i_2.svg'"></span>
